@@ -1,0 +1,6 @@
+"""WebSocket real-time communication package for SmartPark RTD."""
+
+from websocket.manager import ConnectionManager, ws_manager
+
+__all__ = ["ConnectionManager", "ws_manager"]
+

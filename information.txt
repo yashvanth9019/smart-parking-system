@@ -1,0 +1,159 @@
+# Project: Smart Parking Management System Using Real-Time Data
+
+Act as a senior full-stack developer and software architect. Build a complete, advanced-level Smart Parking Management System that uses Real-Time Data (RTD) to monitor parking slot availability, manage bookings, and provide live parking updates.
+
+## 1. Technology Stack
+- Frontend: Next.js, React, HTML, CSS, Tailwind CSS
+- Backend: Python FastAPI
+- Database: MongoDB
+- Real-time communication: WebSockets
+- Charts: Chart.js
+- Maps: Leaflet / OpenStreetMap
+- Authentication: JWT
+- Optional IoT: ESP32 with ultrasonic sensors
+
+## 2. User Modules
+
+### User Registration and Login
+- User registration and login.
+- Secure JWT authentication.
+- User profile management.
+- View booking history.
+
+### Live Parking Dashboard
+- Display total parking slots.
+- Show available, occupied, and reserved slots.
+- Update parking availability instantly without refreshing.
+- Display parking locations on an interactive map.
+- Show parking prices and operating hours.
+
+### Parking Booking
+- Search parking locations.
+- Select an available parking slot.
+- Book a slot by selecting date and time.
+- Generate a unique booking ID.
+- QR code generation for parking entry.
+- Cancel bookings.
+- Calculate parking charges automatically.
+
+### Real-Time Notifications
+- Notify users when a slot becomes available.
+- Booking confirmation notifications.
+- Booking cancellation notifications.
+- Parking time-expiry alerts.
+
+## 3. Admin Module
+
+Create a separate admin dashboard with:
+- Admin login.
+- Add, update, and delete parking locations.
+- Add and manage parking slots.
+- Monitor occupied and available slots.
+- View all customer bookings.
+- Manage parking prices.
+- View revenue reports.
+- View daily, weekly, and monthly analytics.
+- Monitor real-time parking activity.
+
+## 4. Real-Time Data Processing
+
+Implement WebSocket communication to update parking slot status instantly.
+
+When a vehicle enters:
+1. Detect vehicle presence using an IoT sensor or simulated input.
+2. Send occupancy data to the backend.
+3. Update MongoDB.
+4. Broadcast the updated slot status using WebSockets.
+5. Update the user and admin dashboards instantly.
+
+Repeat the process when a vehicle exits.
+
+Provide a sensor simulation mode if physical IoT hardware is unavailable.
+
+## 5. Advanced Features
+- Smart parking slot allocation.
+- QR-based vehicle entry and exit.
+- Dynamic parking pricing.
+- Parking occupancy prediction using machine learning.
+- Peak-hour analysis.
+- Revenue prediction.
+- Interactive parking map.
+- Multiple parking locations.
+- Real-time analytics dashboard.
+
+## 6. Database Design
+
+Create MongoDB collections:
+- users
+- admins
+- parking_locations
+- parking_slots
+- bookings
+- payments
+- notifications
+- sensor_logs
+
+Use proper references, validation, timestamps, and indexes.
+
+## 7. UI/UX Requirements
+
+Design a modern, responsive, professional dashboard.
+
+Use:
+- Modern sidebar navigation.
+- Dashboard cards.
+- Live parking status indicators.
+- Interactive charts.
+- Search and filter functionality.
+- Responsive tables.
+- Professional login and registration pages.
+- Light and dark themes.
+
+Color indicators:
+- Green: Available
+- Red: Occupied
+- Yellow: Reserved
+
+## 8. Security
+- JWT authentication.
+- Role-based access control.
+- Password hashing.
+- Backend input validation.
+- Protected API routes.
+- Prevent double booking.
+- Validate payments and booking status.
+
+## 9. Project Structure
+
+Create a clean folder structure separating:
+- frontend
+- backend
+- database
+- websocket
+- IoT simulation
+- machine learning
+- documentation
+
+## 10. Expected Deliverables
+
+Generate:
+1. Complete frontend source code.
+2. Complete FastAPI backend.
+3. MongoDB database integration.
+4. WebSocket real-time functionality.
+5. Admin and user dashboards.
+6. IoT sensor simulation.
+7. Machine learning prediction module.
+8. API documentation.
+9. README with installation instructions.
+10. Sample database data.
+
+## Important Instructions
+- Generate fully working code, not just UI designs.
+- Connect frontend and backend properly.
+- Ensure all CRUD operations work.
+- Implement real-time updates without page refresh.
+- Include error handling and loading states.
+- Provide environment configuration examples.
+- Include step-by-step instructions to run the project in VS Code.
+- Make the project suitable for an advanced MCA final-year RTD subject demonstration.
